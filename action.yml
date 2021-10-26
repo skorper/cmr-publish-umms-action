@@ -1,0 +1,29 @@
+name: 'UMM-S Updater'
+description: 'Publish UMM-S updates to CMR'
+inputs:
+  umm-s-json:
+    description: 'JSON file containing new UMM-S contents'
+    required: true
+  provider:
+    description: 'CMR Provider ID'
+    required: true
+  env:
+    description: 'Venue to make update'
+    required: true
+  cmr-user:
+    description: 'CMR username, used tp request token'
+    required: true
+  cmr-pass:
+    description: 'CMR password, used tp request token' # TODO make this a GHA secret
+    required: true
+  association-file:
+    description: 'File containing newline separated list of concept IDs to associate with this UMM-S entry'
+    required: false
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ -f inputs.umm-s-json -p inputs.provider -e inputs.env -cu inputs.cmr-user -cp inputs.cmr-pass -a inputs.association-file }}

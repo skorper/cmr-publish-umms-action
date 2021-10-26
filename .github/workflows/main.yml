@@ -1,0 +1,20 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: skorper/cmr-publish-umms-action@0.0.1
+        with:
+          umm-s-json: 'test1'
+          provider: 'test2'
+          env: 'test3'
+          cmr-user: 'test4'
+          cmr-pass: 'test5'
+          association-file: 'test6'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
