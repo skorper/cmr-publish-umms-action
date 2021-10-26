@@ -7,14 +7,16 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: skorper/cmr-publish-umms-action@0.0.3
+        uses: skorper/cmr-publish-umms-action@0.0.4
         with:
           umm-s-json: 'test1'
           provider: 'test2'
           env: 'test3'
-          cmr-user: 'test4'
-          cmr-pass: 'test5'
-          association-file: 'test6'
+          association-file: 'test4'
+          version: 'test5'
+        env:
+          cmr_user: ${{secrets.CMR_USER}}
+          cmr_pass: ${{secrets.CMR_PASS}}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
