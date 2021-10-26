@@ -26,4 +26,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ -f inputs.umm-s-json -p inputs.provider -e inputs.env -cu inputs.cmr-user -cp inputs.cmr-pass -a inputs.association-file }}
+    - ${{inputs.umm-s-json}}
+    - ${{inputs.provider}}
+    - ${{inputs.env}}
+    - ${{inputs.cmr-user}}
+    - ${{inputs.cmr-pass}}
+    - ${{inputs.association-file }}
