@@ -8,7 +8,7 @@ inputs:
     description: 'CMR Provider ID'
     required: true
   env:
-    description: 'Venue to make update'
+    description: 'Venue to update UMM-S in'
     required: true
   version:
     description: 'Service version to be substituted in to UMM-S entry'
@@ -19,4 +19,4 @@ runs:
     - ${{inputs.umm-s-json}}
     - ${{inputs.provider}}
     - ${{inputs.env}}
-    - ${{inputs.version }}
+    - ${{inputs.version}}
