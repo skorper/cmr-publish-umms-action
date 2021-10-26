@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: skorper/cmr-publish-umms-action@0.0.2
+        uses: skorper/cmr-publish-umms-action@0.0.3
         with:
           umm-s-json: 'test1'
           provider: 'test2'
