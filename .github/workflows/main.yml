@@ -9,13 +9,10 @@ jobs:
         id: umm-s-update
         uses: skorper/cmr-publish-umms-action@0.0.6
         with:
-          umm-s-json: 'concise_cmr_umm_s.json'
+          umm-s-json: 'cmr/test.json'
           provider: 'POCLOUD'
           env: 'uat'
           version: '1.2.3'
         env:
           cmr_user: ${{secrets.CMR_USER}}
           cmr_pass: ${{secrets.CMR_PASS}}
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"

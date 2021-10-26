@@ -12,9 +12,6 @@ inputs:
     required: true
   version:
     description: 'Service version to be substituted in to UMM-S entry'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
