@@ -16,13 +16,13 @@ echo "cmr_user $cmr_user"
 echo "cmr_pass $cmr_pass"
 echo "assoc cmr/${env}_associations.txt"
 
-ls -la .
-echo `cat $file`
+echo "pwd=$pwd"
 
 echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}"
-ls $GITHUB_WORKSPACE
+echo "ls=`ls $GITHUB_WORKSPACE`"
 
 cd $GITHUB_WORKSPACE
+echo "pwd=$pwd"
 
 # Replace version placeholder with actual version
 jq --arg a $version '.Version = $a' $file > "cmr/cmr.json"
