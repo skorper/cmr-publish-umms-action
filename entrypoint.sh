@@ -4,7 +4,7 @@ set -Exo pipefail
 set +x
 
 echo $GITHUB_WORKSPACE
-echo `ls $GITHUB_WORKSPACE`
+ls "$GITHUB_WORKSPACE/*"
 
 file="/$1"
 provider=$2
