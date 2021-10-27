@@ -4,7 +4,7 @@ FROM alpine:3.10
 RUN apk add --no-cache bash jq
 
 RUN ls -la .
-RUN ls -la $GITHUB_WORKSPACE
+RUN ls -la /github/workspace/
 
 # Copy in UMM-S JSON file
 COPY cmr/ /cmr/
