@@ -1,7 +1,7 @@
 # Container image that runs your code
 FROM alpine:3.10
 
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash jq
 
 # Copy in UMM-S JSON file
 
