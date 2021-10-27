@@ -43,7 +43,7 @@ RUN mkdir /podaac-umm-publisher
 COPY . .
 
 RUN poetry install 
-RUN umms_updater --help
+RUN poetry run umms_updater --help
 
 #RUN poetry version | awk '{print $1}'
 #RUN echo "GITHUB REF=$GITHUB_REF"
