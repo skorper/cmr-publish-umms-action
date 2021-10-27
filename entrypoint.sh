@@ -1,6 +1,6 @@
-#!/bin/sh -l
+#!/bin/bash -l
 
-#set -Exo pipefail
+set -Exo pipefail
 set +x
 
 file=$1
@@ -27,7 +27,7 @@ fi
 
 echo "umms_updater -d -f cmr/cmr.json -a cmr/${env}_associations.txt -p POCLOUD -e ${env} -cu $cmr_user -cp $cmr_pass"
 
-umms_updater --help
+poetry run umms_updater --help
 
 echo `cat cmr/cmr.json`
 
