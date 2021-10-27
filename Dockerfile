@@ -8,7 +8,7 @@ COPY entrypoint.sh /entrypoint.sh
 
 # Get version from pyproject.toml
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-MKDIR /podaac-umm-publisher
+RUN mkdir /podaac-umm-publisher
 COPY . .
 
 RUN poetry install 
