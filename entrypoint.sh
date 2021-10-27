@@ -3,7 +3,7 @@
 set -Exo pipefail
 set +x
 
-file=$1
+file="/$1"
 provider=$2
 env=$3
 version=$4

@@ -7,9 +7,9 @@ jobs:
     steps:
       - name: UMM-S Updater Step
         id: umm-s-update
-        uses: skorper/cmr-publish-umms-action@0.0.30
+        uses: skorper/cmr-publish-umms-action@0.0.31
         with:
-          umm-s-json: '/cmr/test.json'
+          umm-s-json: 'cmr/test.json'
           provider: 'POCLOUD'
           env: 'uat'
           version: '1.2.3'
