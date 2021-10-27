@@ -1,6 +1,8 @@
 # Container image that runs your code
 FROM alpine:3.10
 
+RUN apk add --no-cache bash
+
 # Copy in UMM-S JSON file
 COPY cmr/ cmr/
 

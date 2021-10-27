@@ -16,8 +16,8 @@ echo "cmr_user $cmr_user"
 echo "cmr_pass $cmr_pass"
 echo "assoc cmr/${env}_associations.txt"
 
-ls -la .
-echo `cat $file`
+# ls -la .
+# echo `cat $file`
 
 
 # # Replace version placeholder with actual version
