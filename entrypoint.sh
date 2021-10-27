@@ -27,6 +27,8 @@ fi
 
 echo "umms_updater -d -f cmr/cmr.json -a cmr/${env}_associations.txt -p POCLOUD -e ${env} -cu $cmr_user -cp $cmr_pass"
 
+umm_s_updater --help
+
 echo `cat cmr/cmr.json`
 
 set -x
