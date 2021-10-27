@@ -22,6 +22,7 @@ echo `cat $file`
 echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}"
 ls $GITHUB_WORKSPACE
 
+cd $GITHUB_WORKSPACE
 
 # Replace version placeholder with actual version
 jq --arg a $version '.Version = $a' $file > "cmr/cmr.json"
