@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-set -Exo pipefail
+#set -Exo pipefail
 set +x
 
 file=$1
