@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM alpine:3.10
+FROM python:3.9.7-alpine
 
 RUN apk add --no-cache bash jq
 
@@ -7,9 +7,10 @@ RUN apk add --no-cache bash jq
 COPY entrypoint.sh /entrypoint.sh
 
 # Download this repo from pip
-# echo version
-RUN env
-#RUN pip install podaac-umm-publisher-action==$VERSION
+COPY . /
+RUN pip install /
+# Verify installation
+RUN umms_updater --help
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
