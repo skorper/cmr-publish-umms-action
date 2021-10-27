@@ -7,10 +7,15 @@ RUN apk add --no-cache bash jq curl
 COPY entrypoint.sh /entrypoint.sh
 
 # Get version from pyproject.toml
-#RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-#COPY pyproject.toml /yproject.toml
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+MKDIR /podaac-umm-publisher
+COPY . .
+
+RUN poetry install 
+RUN umms_updater --help
+
 #RUN poetry version | awk '{print $1}'
-RUN echo "GITHUB REF=$GITHUB_REF"
+#RUN echo "GITHUB REF=$GITHUB_REF"
 
 # Install from pip
 #pip install -i https://test.pypi.org/simple/ podaac-umm-publisher==0.0.51a0
