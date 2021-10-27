@@ -4,11 +4,13 @@ FROM alpine:3.10
 RUN apk add --no-cache bash jq
 
 # Copy in UMM-S JSON file
-
 COPY cmr/ /cmr/
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
+
+# Copy in Python dist TODO how to install python lib in the container?!?!?!
+#COPY ...
 
 RUN ls -la .
 RUN ls -la cmr/
