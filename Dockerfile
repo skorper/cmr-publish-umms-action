@@ -3,20 +3,13 @@ FROM alpine:3.10
 
 RUN apk add --no-cache bash jq
 
-RUN ls -la .
-#RUN ls -la /github/workspace/
-
-# Copy in UMM-S JSON file
-#COPY cmr/ /cmr/
-
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 
-# Copy in Python dist TODO how to install python lib in the container?!?!?!
-#COPY ...
-
-#RUN ls -la .
-#RUN ls -la cmr/
+# Download this repo from pip
+# echo version
+RUN env
+#RUN pip install podaac-umm-publisher-action==$VERSION
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]

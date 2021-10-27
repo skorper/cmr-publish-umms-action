@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "podaac-umm-publisher-action"
+name = "podaac-umm-publisher"
 version = "0.0.1"
 description = "Github action that publishes UMM-S and UMM-T updates to CMR"
 authors = ["podaac-cloud-tva <podaac-cloud-tva@jpl.nasa.gov>"]
