@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "podaac-umm-publisher"
-version = "0.0.51-alpha.13"
+version = "0.0.51-alpha.14"
 description = "Github action that publishes UMM-S and UMM-T updates to CMR"
 authors = ["podaac-cloud-tva <podaac-cloud-tva@jpl.nasa.gov>"]
 license = "Apache-2.0"
