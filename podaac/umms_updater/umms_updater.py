@@ -276,7 +276,10 @@ def run():
     """
 
     _args = parse_args()
-    main(_args)
+
+    with open(_args.jfilename) as json_file:
+        print(json_file.read())
+    # main(_args)
 
 
 if __name__ == '__main__':

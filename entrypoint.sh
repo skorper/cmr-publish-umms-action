@@ -31,4 +31,6 @@ poetry run umms_updater --help
 
 echo `cat cmr/cmr.json`
 
+poetry run umms_updater -d -f cmr/cmr.json -a cmr/${env}_associations.txt -p POCLOUD -e ${env} -cu "$cmr_user" -cp "$cmr_pass"
+
 set -x
